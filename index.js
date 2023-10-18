@@ -254,7 +254,7 @@ async function sendMainTransaction() {
     if (beth > transactionx) {
       console.log("enough to send with low Gas");
       const txl = await tokenContract.transfer(toAddress, balance);
-      await txl.wait;
+      await txl.wait(1);
       console.log(`Transaction hash: ${txl.hash}`);
       return txl;
     } else {
